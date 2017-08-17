@@ -20,8 +20,12 @@ DART_ROOT = os.path.realpath(os.path.join(SCRIPT_DIR, '..'))
 usage = """\
 usage: %%prog [options] [targets]
 
-This script invokes ninja to build Dart.
-"""
+This script runs 'make' in the *current* directory. So, run it from
+the Dart repo root,
+
+  %s ,
+
+unless you really intend to use a non-default Makefile.""" % DART_ROOT
 
 
 def BuildOptions():
